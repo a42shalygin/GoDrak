@@ -21,6 +21,7 @@ var rollNode
 var cameraNode
 var velocity = Vector3()
 var run = 1
+var doubleJumpDone = false
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -74,16 +75,20 @@ func _process(delta):
 	velocity.x = direction.x
 	velocity.z = direction.z
 	
-		
+
+	# Jump 
+	if Input.is_key_pressed(KEY_SPACE):
+		if is_on_floor():
+			doubleJumpDone = false
+#			print("JUMP MOTHERFUCKER!!!")
+			velocity.y = +5
+		else:
+			if not doubleJumpDone:
+				velocity.y +=5
+				doubleJumpDone = true
+					
 	# Move
 	velocity = move_and_slide(velocity, Vector3(0,1,0))
-	
-	
-	# Jump 
-	if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
-		print("JUMP MOTHERFUCKER!!!")
-		velocity.y = 5
-		
 	# ========================= CAMERA ==========================
 	
 	if mouseCapture:
