@@ -1,0 +1,38 @@
+# Material file for REO file: SmallHouse(M)01
+
+newmtl Material0
+map_Kd Texture212.bmp
+
+newmtl Material1
+map_Kd Texture213.bmp
+
+newmtl Material2
+map_Kd Texture202.bmp
+
+newmtl Material3
+map_Kd Texture214.bmp
+
+newmtl Material4
+map_Kd Texture215.bmp
+
+newmtl Material5
+map_Kd Texture216.bmp
+
+newmtl Material6
+map_Kd Texture63.bmp
+
+newmtl Material7
+map_Kd Texture199.bmp
+
+newmtl Material8
+map_Kd Texture203.bmp
+
+newmtl Material9
+map_Kd Texture62.bmp
+
+newmtl Material10
+map_Kd Texture102.bmp
+
+newmtl Material11
+map_Kd Texture218.bmp
+

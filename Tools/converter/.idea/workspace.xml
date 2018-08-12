@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0ffb3f0f-bf7d-4f89-ad61-a459ff5f0e0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBJClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/OBJClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBJConverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/OBJConverter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REOConverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/REOConverter.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-548691802">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="3256" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="3256" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OBJClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OBJConverter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
+              <folding>
+                <element signature="e#46#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/REOClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/REOConverter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360">
+              <caret line="237" column="44" lean-forward="true" selection-start-line="237" selection-start-column="44" selection-end-line="237" selection-end-column="44" />
+              <folding>
+                <marker date="1534104448589" expanded="true" signature="134:10964" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="43" column="81" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="81" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1533755074505" expanded="true" signature="124:125" ph="..." />
+                <marker date="1533755074505" expanded="true" signature="203:204" ph="..." />
+                <marker date="1533755074505" expanded="true" signature="203:209" ph="..." />
+                <marker date="1533755074505" expanded="true" signature="273:278" ph="..." />
+                <marker date="1533755074505" expanded="true" signature="273:282" ph="..." />
+                <marker date="1533755074505" expanded="true" signature="489:495" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/unittest/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="330" selection-start-line="330" selection-end-line="330" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>happe</find>
+      <find>filename</find>
+      <find>open</find>
+      <find>-3</find>
+      <find>:-</find>
+      <find>failed</find>
+      <find>mtl</find>
+      <find>Lighting</find>
+      <find>sorted</find>
+      <find>usemtl</find>
+      <find>rever</find>
+      <find>reverse</find>
+      <find>vertex</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\GoDot\Drakan-REO-OBJ-Converter\reo</dir>
+      <dir>C:\GoDot\Drakan-REO-OBJ-Converter</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/OBJClass.py" />
+        <option value="$PROJECT_DIR$/OBJConverter.py" />
+        <option value="$PROJECT_DIR$/Tests.py" />
+        <option value="$PROJECT_DIR$/REOConverter.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Drakan-REO-OBJ-Converter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drakan-REO-OBJ-Converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for Tests.IntegrationTests.test_back_and_forth">
+    <configuration name="OBJConverter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Drakan-REO-OBJ-Converter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OBJConverter.py" />
+      <option name="PARAMETERS" value="-i C:\GoDot\Drakan-REO-OBJ-Converter\obj -o C:\GoDot\Drakan-REO-OBJ-Converter\reo" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="REOConverter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Drakan-REO-OBJ-Converter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/REOConverter.py" />
+      <option name="PARAMETERS" value="-i reo -o obj" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Drakan-REO-OBJ-Converter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.IntegrationTests.test_back_and_forth&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.OBJConverter" />
+      <item itemvalue="Python.REOConverter" />
+      <item itemvalue="Python tests.Unittests for Tests.IntegrationTests.test_back_and_forth" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for Tests.IntegrationTests.test_back_and_forth" />
+        <item itemvalue="Python.REOConverter" />
+        <item itemvalue="Python.OBJConverter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ffb3f0f-bf7d-4f89-ad61-a459ff5f0e0c" name="Default Changelist" comment="" />
+      <created>1532981991047</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532981991047</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 02m 49s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 03m 39s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 03m 55s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 04m 57s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 05m 22s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 05m 47s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 06m 08s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 07m 28s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 09m 12s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Tests_IntegrationTests_test_back_and_forth - 2018.08.12 at 23h 12m 31s.xml">
+      <configuration name="Unittests for Tests.IntegrationTests.test_back_and_forth" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" weight="0.12241653" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3291815" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3291815" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.12241653" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3291815" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3291815" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/OBJConverter.py</url>
+          <line>179</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/REOConverter.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tests.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/REOConverter.py</url>
+          <line>240</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/REOConverter.py</url>
+          <line>237</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/OBJClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OBJConverter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
+          <folding>
+            <element signature="e#46#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REOClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="330" selection-start-line="330" selection-end-line="330" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REOConverter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="237" column="44" lean-forward="true" selection-start-line="237" selection-start-column="44" selection-end-line="237" selection-end-column="44" />
+          <folding>
+            <marker date="1534104448589" expanded="true" signature="134:10964" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="43" column="81" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1533755074505" expanded="true" signature="124:125" ph="..." />
+            <marker date="1533755074505" expanded="true" signature="203:204" ph="..." />
+            <marker date="1533755074505" expanded="true" signature="203:209" ph="..." />
+            <marker date="1533755074505" expanded="true" signature="273:278" ph="..." />
+            <marker date="1533755074505" expanded="true" signature="273:282" ph="..." />
+            <marker date="1533755074505" expanded="true" signature="489:495" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
