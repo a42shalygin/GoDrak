@@ -1,0 +1,50 @@
+# Put this effect in the Tools->Export menu.
+Menu 14
+
+# If this effect needs a dialog, it may be put here as a Dialog command 
+Dialog
+20,	"SoftImage to REO export", 13,	1,	3,	424, 350, 856, 609
+   1,	2,	"Ok",		656, 375, 736, 411, 0
+   2,	2,	"Cancel",	566, 375, 646, 411, 0
+   3,	5,	"c:\temp\output",449, 558, 729, 586, 0, MIN, MAX, 0
+   4,	0,	"Scale:",	488, 503, 538, 518, 0
+   5,	5,	"0.0254",		554, 497, 599, 525, 1, MIN, MAX, 0
+   6,	5,	"0.0254",		629, 497, 674, 525, 1, MIN, MAX, 0
+   7,	5,	"0.0254",		704, 497, 749, 525, 1, MIN, MAX, 0
+   8,	0,	"X",		577, 532, 582, 547, 0
+   9,	0,	"Y",		651, 532, 656, 547, 0
+   10,	0,	"Z",		723, 532, 728, 547, 0
+   11,	0,	"",		653, 375, 653, 375, 0
+   12,	2,	"Browse...",	743, 555, 833, 591, 0
+   13,	3,	"Output fitmap files",540, 447, 731, 462, 0
+
+
+
+_BROWSER
+  12 3
+_END
+
+
+
+_SYMBOLS
+  FILENAME    3
+  XSCALE    5
+  YSCALE    6
+  ZSCALE    7
+  BROWSER.REO    12
+  MAKEBMPS    13
+_END
+
+_EXCLUSIVE
+_END
+
+# Set up this effect as a DSO-based (not process-based) effect.
+_DYNAMIC_LINK
+
+LINKNAME                Soft2REO2
+
+CUSTOM_INIT_FUNCTION    init
+CUSTOM_UPDATE_FUNCTION  update
+CUSTOM_CLEANUP_FUNCTION cleanup
+
+_END
