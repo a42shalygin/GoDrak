@@ -2,13 +2,13 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Texture4872.png-9272d5de1697329b5ab5039527fdb22a.s3tc.stex"
-path.etc2="res://.import/Texture4872.png-9272d5de1697329b5ab5039527fdb22a.etc2.stex"
+path.s3tc="res://.import/Texture4872.png-ff2e37042fa8a592260a52a310159557.s3tc.stex"
+path.etc2="res://.import/Texture4872.png-ff2e37042fa8a592260a52a310159557.etc2.stex"
 
 [deps]
 
-source_file="res://Models/Rynn/Texture4872.png"
-dest_files=[ "res://.import/Texture4872.png-9272d5de1697329b5ab5039527fdb22a.s3tc.stex", "res://.import/Texture4872.png-9272d5de1697329b5ab5039527fdb22a.etc2.stex" ]
+source_file="res://Models/Player_leather/Texture4872.png"
+dest_files=[ "res://.import/Texture4872.png-ff2e37042fa8a592260a52a310159557.s3tc.stex", "res://.import/Texture4872.png-ff2e37042fa8a592260a52a310159557.etc2.stex" ]
 
 [params]
 

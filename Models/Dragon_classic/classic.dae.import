@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/classic.dae-09a5369a372fff8c80977f88a4abd288.scn"
+path="res://.import/classic.dae-91b16eadc998e4dbe2e94b6a76271a78.scn"
 
 [deps]
 
-source_file="res://Models/Arokh/classic.dae"
-dest_files=[ "res://.import/classic.dae-09a5369a372fff8c80977f88a4abd288.scn" ]
+source_file="res://Models/Dragon_classic/classic.dae"
+dest_files=[ "res://.import/classic.dae-91b16eadc998e4dbe2e94b6a76271a78.scn" ]
 
 [params]
 

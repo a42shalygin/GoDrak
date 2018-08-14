@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/leather.dae-9209c2b760be09d204baae56e055bd12.scn"
+path="res://.import/leather.dae-edd36adb8c433b24bfc419a0b193ca24.scn"
 
 [deps]
 
-source_file="res://Models/Rynn/leather.dae"
-dest_files=[ "res://.import/leather.dae-9209c2b760be09d204baae56e055bd12.scn" ]
+source_file="res://Models/Player_leather/leather.dae"
+dest_files=[ "res://.import/leather.dae-edd36adb8c433b24bfc419a0b193ca24.scn" ]
 
 [params]
 

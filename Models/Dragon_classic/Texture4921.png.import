@@ -2,13 +2,13 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Texture4921.png-39522768ef278c233780b40b343181f6.s3tc.stex"
-path.etc2="res://.import/Texture4921.png-39522768ef278c233780b40b343181f6.etc2.stex"
+path.s3tc="res://.import/Texture4921.png-efe73a6bf53fee40e4fbfbd996e3b158.s3tc.stex"
+path.etc2="res://.import/Texture4921.png-efe73a6bf53fee40e4fbfbd996e3b158.etc2.stex"
 
 [deps]
 
-source_file="res://Models/Arokh/Texture4921.png"
-dest_files=[ "res://.import/Texture4921.png-39522768ef278c233780b40b343181f6.s3tc.stex", "res://.import/Texture4921.png-39522768ef278c233780b40b343181f6.etc2.stex" ]
+source_file="res://Models/Dragon_classic/Texture4921.png"
+dest_files=[ "res://.import/Texture4921.png-efe73a6bf53fee40e4fbfbd996e3b158.s3tc.stex", "res://.import/Texture4921.png-efe73a6bf53fee40e4fbfbd996e3b158.etc2.stex" ]
 
 [params]
 

@@ -10,7 +10,7 @@ var cameraDirection
 var initMouse = Vector2(500,200)
 var lastMouse = initMouse
 var mousespeed = 0.001
-var minScale = Vector3(0.5, 0.5, 0.5)
+var minScale = Vector3(0.2, 0.2, 0.2)
 var maxScale = Vector3(2, 2, 2)
 var maxRoll = 0.3
 var mouseCapture = false
