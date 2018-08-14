@@ -1,0 +1,30 @@
+
+Postby HeckFluff » Wed Nov 22, 2017 6:20 pm
+
+Here's the executables and partial source code:
+ DrakanSRSC.7z
+(221 KiB) Downloaded 26 times
+
+If you don't mind running executables from strangers, copy the contents of the bin directory to where dragon.rfl is, and then run "DrakanSRSC_Release_x64.exe" from the command line, in its directory, to catch any error messages. This probably won't work, though, as my code is littered with assertions, and will probably find something it doesn't like, but I provide this anyway on the off chance it does work first time. Also, you'll probably need the latest Visual C++ 2017 runtime: https://support.microsoft.com/en-gb/hel ... -downloads. If you don't like running executables from strangers, use a VM. It might even work in Wine.
+
+If it does work, the output will be created in a "Drakan Dump" directory. You'll need about 1GB of free space and you must have write permissions to the directory. It will take a while to finish because of the number of PNGs it creates. 
+
+The input is all "adb", "mod", "odb", "sdb", "txd", "ssd", and "lvl" files that have an associated "db" file. But, I know that "lvl" files don't need a "db" file, because they store their own dependency information, and this case currently isn't handled.
+
+Output COLLADA "dae" files can be imported into Blender, but texture transparency is only partially handled. You'll need to check the Influence Alpha checkbox in the texture sidebar. For further improved look, change the shading model to "Smooth".
+
+IDs in output files are not remapped, except for textures in the COLLADA files, so cross-database IDs have an unusable top 16-bits unless you do your own remapping.
+
+The provided source code cannot be compiled, because it depends on a library of utility code that I won't share, but you can at least glean the file format from it.
+
+Notable quirks:
+The Level Editor has a buggy animation output window. The translation Z component is the same as the X component.
+"Drakan Dump\Common\System\System [root]\Texture5208.png" has a corrupt alpha channel. This can be seen in the Level Editor by viewing the "rynn plate (m)318" model.
+Texture animations are loosely defined. Models just store the ID of the first texture. Further textures in the animation are marked as "Next Frame" and come immediately after the previous frame in the TXD file. Only the first texture defines the frame rate.
+Model polygons can be either triangles or quads.
+Physics geometry? There isn't any. The engine probably uses model geometry for static entities and spheres for moving entities.
+Finally, this extractor allows anybody to reimplement Drakan without any artistic skill, assuming sufficient technical prowess. And then with a modern reimplementation, these assets can be incrementally replaced over time with better looking variants.
+
+Technical reverse engineering note: You can use https://docs.microsoft.com/en-us/sysint ... ds/procmon to see how the Level Editor deserialises the files. It does a ReadFile for each little bit of data.
+
+EDIT: And I forgot to mention, because I've determined the file format for levels, this will allow for automated modding, like increasing the number of enemies everywhere, or removing health potions, or whatever.

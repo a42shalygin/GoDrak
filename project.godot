@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="GoDrak"
-run/main_scene="res://Village.tscn"
+run/main_scene="res://Scenes/Village.tscn"
 config/icon="res://icon.png"
 
 [rendering]

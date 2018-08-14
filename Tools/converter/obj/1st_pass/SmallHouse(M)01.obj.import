@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SmallHouse(M)01.obj-3ae73bb4897be93adb3d5243b83b7d3f.mesh"
+
+[deps]
+
+files=[ "res://.import/SmallHouse(M)01.obj-3ae73bb4897be93adb3d5243b83b7d3f.mesh" ]
+
+source_file="res://Tools/converter/obj/1st_pass/SmallHouse(M)01.obj"
+dest_files=[ "res://.import/SmallHouse(M)01.obj-3ae73bb4897be93adb3d5243b83b7d3f.mesh", "res://.import/SmallHouse(M)01.obj-3ae73bb4897be93adb3d5243b83b7d3f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
