@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Nata</author>
+      <authoring_tool>OpenCOLLADA2018;  Version: 1.6;  Revision: 63</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=0;relativePaths=0;preserveSourceTree=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=1;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=1;exportPhysics=0;exportConvexMeshGeometries=1;exportPolygonMeshes=1;exportLights=0;
+			exportCameras=0;exportAnimationsOnly=0;exportSeparateFile=0;modelNameDAE=;exportJoints=1;exportSkin=1;exportAnimations=1;exportOptimizedBezierAnimation=1;exportInvisibleNodes=0;exportDefaultCameras=0;
+			exportTexCoords=0;exportNormals=0;exportNormalsPerVertex=1;exportVertexColors=0;exportVertexColorsPerVertex=1;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=1;dereferenceXRefs=1;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=1;encodedNames=1;doublePrecision=0
+		</comments>
+      <source_data>file:///D:/Work/GoDrak/anim_test_2.mb</source_data>
+    </contributor>
+    <created>2018-08-27T19:54:34</created>
+    <modified>2018-08-27T19:54:34</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert1" name="lambert1">
+      <instance_effect url="#lambert1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert1-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.4 0.4 0.4 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId sid="originalMayaNodeId" type="string">lambert1</originalMayaNodeId>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_controllers>
+    <controller id="pCubeShape1-skin" name="pCubeShape1-skin">
+      <skin source="#pCubeShape1">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="pCubeShape1-skin-joints" name="pCubeShape1-skin-joints">
+          <Name_array id="pCubeShape1-skin-joints-array" count="4">joint1 joint2 joint3 joint4</Name_array>
+          <technique_common>
+            <accessor source="#pCubeShape1-skin-joints-array" count="4" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pCubeShape1-skin-bind_poses" name="pCubeShape1-skin-bind_poses">
+          <float_array id="pCubeShape1-skin-bind_poses-array" count="64">0 1 0 0 -1 0 0 0 0 0 1 0 0 0 0 1 0 1 0 -2 -1 0 0 0 0 0 1 0 0 0 0 1 0 1 0 -4 -1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 -6 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#pCubeShape1-skin-bind_poses-array" count="4" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pCubeShape1-skin-weights" name="pCubeShape1-skin-weights">
+          <float_array id="pCubeShape1-skin-weights-array" count="223">1 0.9998906 1.09296e-4 0.9998769 1.23044e-4 0.9995316 4.68224e-4 0.999519 4.80789e-4 0.9962331 0.003766417 0.9962179 0.003781676 0.977701 0.02229803 0.9779062 0.02209275 0.9178168 0.08218103 0.9191283 0.08086943 0.7972321 0.2027621 0.8000339 0.1999601 0.6275423 0.3724347 0.6298123 0.3701639 0.4370592 0.5628166 1.24141e-4 0.4377035 0.5621694 1.27009e-4 0.2542914 0.7448429 8.65509e-4 0.2545916 0.7445285 8.79659e-4 0.1129519 0.8804858 0.006561756 0.1130718 0.8802914 0.006636142 0.03472143 0.9312911 0.03398627 0.03460997 0.931041 0.03434765 0.00688672 0.8810145 0.1120958 0.006820797 0.8802898 0.1128862 9.58178e-4 0.7456803 0.2533523 9.41474e-4 0.7445244 0.2545245 1.3809e-4 0.564374 0.4354466 1.34863e-4 0.5621606 0.4376614 0.3727445 0.6269811 2.50395e-4 0.3701484 0.6295686 2.59262e-4 0.2007796 0.7971218 0.002092421 0.1999393 0.7979013 0.002153337 0.08044767 0.9055448 0.01400524 0.08084678 0.9047254 0.01442551 0.0218057 0.9189158 0.05927753 0.02206879 0.9178993 0.06003093 0.003720521 0.8373982 0.1588808 0.003756403 0.8376356 0.1586075 4.62453e-4 0.7144435 0.2850939 4.57313e-4 0.7154606 0.2840819 1.06421e-4 0.638532 0.3613615 0.6316207 0.3682867 0.6305575 0.3693495 1.00146e-4 0.6379542 0.3619455 4.50036e-4 0.71432 0.2852299 4.46554e-4 0.7154654 0.2840879 0.00370121 0.8385745 0.1577239 0.003742158 0.8385349 0.1577225 0.02198272 0.9192363 0.05878001 0.02227455 0.9181039 0.05962055 0.08165764 0.9041972 0.01414293 0.08215874 0.9032594 0.01457965 0.2033826 0.7944417 0.002169907 0.2027416 0.7950195 0.002233147 0.3748242 0.6248954 2.57266e-4 0.3724194 0.6272913 2.66453e-4 1.34626e-4 0.5649863 0.4348367 1.31599e-4 0.5628079 0.4370163 9.35012e-4 0.7460344 0.2530212 9.19751e-4 0.7448388 0.2542316 0.006779253 0.8813008 0.111917 0.006722807 0.8804841 0.1127898 0.03429669 0.9316223 0.03407973 0.034226 0.9312909 0.03448164 0.1120767 0.8813022 0.006620466 0.1122792 0.881016 0.006704211 0.253086 0.7460382 8.75584e-4 0.2534244 0.7456842 8.91163e-4 0.4348794 0.5649947 1.25774e-4 0.4354885 0.5643826 1.28842e-4 0.6251378 0.3748391 0.6272164 0.3727595 0.7965918 0.2034025 0.799194 0.2008 0.9183186 0.08167922 0.919528 0.08046966 0.9779937 0.02200525 0.9781701 0.02182883 0.9962748 0.003724813 0.9962546 0.003745019 0.9995274 4.72424e-4 0.9995151 4.84675e-4 0.9998774 1.22504e-4 0.9998853 1.1457e-4 </float_array>
+          <technique_common>
+            <accessor source="#pCubeShape1-skin-weights-array" count="223" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#pCubeShape1-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#pCubeShape1-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="84">
+          <input semantic="JOINT" source="#pCubeShape1-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#pCubeShape1-skin-weights" offset="1"/>
+          <vcount>2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 </vcount>
+          <v>0 1 1 2 0 3 1 4 0 5 1 6 0 7 1 8 0 9 1 10 0 11 1 12 0 13 1 14 0 15 1 16 0 17 1 18 0 19 1 20 0 21 1 22 0 23 1 24 0 25 1 26 0 27 1 28 0 29 1 30 2 31 0 32 1 33 2 34 0 35 1 36 2 37 0 38 1 39 2 40 0 41 1 42 2 43 0 44 1 45 2 46 0 47 1 48 2 49 0 50 1 51 2 52 0 53 1 54 2 55 0 56 1 57 2 58 0 59 1 60 2 61 0 62 1 63 2 64 0 65 1 66 2 67 0 68 1 69 2 70 1 71 2 72 3 73 1 74 2 75 3 76 1 77 2 78 3 79 1 80 2 81 3 82 1 83 2 84 3 85 1 86 2 87 3 88 1 89 2 90 3 91 1 92 2 93 3 94 1 95 2 96 3 97 1 98 2 99 3 100 1 101 2 102 3 103 1 104 2 105 3 106 1 107 2 108 3 109 2 110 3 111 2 112 3 113 1 114 2 115 3 116 1 117 2 118 3 119 1 120 2 121 3 122 1 123 2 124 3 125 1 126 2 127 3 128 1 129 2 130 3 131 1 132 2 133 3 134 1 135 2 136 3 137 1 138 2 139 3 140 1 141 2 142 3 143 1 144 2 145 3 146 1 147 2 148 3 149 1 150 2 151 3 152 0 153 1 154 2 155 0 156 1 157 2 158 0 159 1 160 2 161 0 162 1 163 2 164 0 165 1 166 2 167 0 168 1 169 2 170 0 171 1 172 2 173 0 174 1 175 2 176 0 177 1 178 2 179 0 180 1 181 2 182 0 183 1 184 2 185 0 186 1 187 2 188 0 189 1 190 2 191 0 192 1 193 2 194 0 195 1 196 0 197 1 198 0 199 1 200 0 201 1 202 0 203 1 204 0 205 1 206 0 207 1 208 0 209 1 210 0 211 1 212 0 213 1 214 0 215 1 216 0 217 1 218 0 219 1 220 0 221 1 222 </v>
+        </vertex_weights>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId sid="originalMayaNodeId">pCubeShape1-skin</originalMayaNodeId>
+          </technique>
+        </extra>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_geometries>
+    <geometry id="pCubeShape1" name="pCubeShape1">
+      <mesh>
+        <source id="pCubeShape1-positions" name="pCubeShape1-positions">
+          <float_array id="pCubeShape1-positions-array" count="252">-0.5 0.004897156 0.5 0.5 0.004897156 0.5 -0.5 0.3048972 0.5 0.5 0.3048972 0.5 -0.5 0.6048972 0.5 0.5 0.6048972 0.5 -0.5 0.9048972 0.5 0.5 0.9048972 0.5 -0.5 1.204897 0.5 0.5 1.204897 0.5 -0.5 1.504897 0.5 0.5 1.504897 0.5 -0.5 1.804897 0.5 0.5 1.804897 0.5 -0.5 2.104897 0.5 0.5 2.104897 0.5 -0.5 2.404897 0.5 0.5 2.404897 0.5 -0.5 2.704897 0.5 0.5 2.704897 0.5 -0.5 3.004897 0.5 0.5 3.004897 0.5 -0.5 3.304897 0.5 0.5 3.304897 0.5 -0.5 3.604897 0.5 0.5 3.604897 0.5 -0.5 3.904897 0.5 0.5 3.904897 0.5 -0.5 4.204897 0.5 0.5 4.204897 0.5 -0.5 4.504897 0.5 0.5 4.504897 0.5 -0.5 4.804897 0.5 0.5 4.804897 0.5 -0.5 5.104897 0.5 0.5 5.104897 0.5 -0.5 5.404897 0.5 0.5 5.404897 0.5 -0.5 5.704897 0.5 0.5 5.704897 0.5 -0.5 6.004897 0.5 0.5 6.004897 0.5 -0.5 6.004897 -0.5 0.5 6.004897 -0.5 -0.5 5.704897 -0.5 0.5 5.704897 -0.5 -0.5 5.404897 -0.5 0.5 5.404897 -0.5 -0.5 5.104897 -0.5 0.5 5.104897 -0.5 -0.5 4.804897 -0.5 0.5 4.804897 -0.5 -0.5 4.504897 -0.5 0.5 4.504897 -0.5 -0.5 4.204897 -0.5 0.5 4.204897 -0.5 -0.5 3.904897 -0.5 0.5 3.904897 -0.5 -0.5 3.604897 -0.5 0.5 3.604897 -0.5 -0.5 3.304897 -0.5 0.5 3.304897 -0.5 -0.5 3.004897 -0.5 0.5 3.004897 -0.5 -0.5 2.704897 -0.5 0.5 2.704897 -0.5 -0.5 2.404897 -0.5 0.5 2.404897 -0.5 -0.5 2.104897 -0.5 0.5 2.104897 -0.5 -0.5 1.804897 -0.5 0.5 1.804897 -0.5 -0.5 1.504897 -0.5 0.5 1.504897 -0.5 -0.5 1.204897 -0.5 0.5 1.204897 -0.5 -0.5 0.9048972 -0.5 0.5 0.9048972 -0.5 -0.5 0.6048972 -0.5 0.5 0.6048972 -0.5 -0.5 0.3048972 -0.5 0.5 0.3048972 -0.5 -0.5 0.004897156 -0.5 0.5 0.004897156 -0.5</float_array>
+          <technique_common>
+            <accessor source="#pCubeShape1-positions-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pCubeShape1-vertices" name="pCubeShape1-vertices">
+          <input semantic="POSITION" source="#pCubeShape1-positions"/>
+        </vertices>
+        <polylist material="initialShadingGroup" count="82">
+          <input semantic="VERTEX" source="#pCubeShape1-vertices" offset="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</vcount>
+          <p>0 1 3 2 2 3 5 4 4 5 7 6 6 7 9 8 8 9 11 10 10 11 13 12 12 13 15 14 14 15 17 16 16 17 19 18 18 19 21 20 20 21 23 22 22 23 25 24 24 25 27 26 26 27 29 28 28 29 31 30 30 31 33 32 32 33 35 34 34 35 37 36 36 37 39 38 38 39 41 40 40 41 43 42 42 43 45 44 44 45 47 46 46 47 49 48 48 49 51 50 50 51 53 52 52 53 55 54 54 55 57 56 56 57 59 58 58 59 61 60 60 61 63 62 62 63 65 64 64 65 67 66 66 67 69 68 68 69 71 70 70 71 73 72 72 73 75 74 74 75 77 76 76 77 79 78 78 79 81 80 80 81 83 82 82 83 1 0 1 83 81 3 3 81 79 5 5 79 77 7 7 77 75 9 9 75 73 11 11 73 71 13 13 71 69 15 15 69 67 17 17 67 65 19 19 65 63 21 21 63 61 23 23 61 59 25 25 59 57 27 27 57 55 29 29 55 53 31 31 53 51 33 33 51 49 35 35 49 47 37 37 47 45 39 39 45 43 41 82 0 2 80 80 2 4 78 78 4 6 76 76 6 8 74 74 8 10 72 72 10 12 70 70 12 14 68 68 14 16 66 66 16 18 64 64 18 20 62 62 20 22 60 60 22 24 58 58 24 26 56 56 26 28 54 54 28 30 52 52 30 32 50 50 32 34 48 48 34 36 46 46 36 38 44 44 38 40 42</p>
+        </polylist>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId sid="originalMayaNodeId">pCubeShape1</originalMayaNodeId>
+          <double_sided sid="double_sided">1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="anim_test_2">
+      <node id="_pCube1" name="pCube1" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <instance_controller url="#pCubeShape1-skin">
+          <skeleton>#_joint1</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="initialShadingGroup" target="#lambert1"/>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId sid="originalMayaNodeId" type="string">pCube1</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+      <node id="_joint1" name="joint1" sid="joint1" type="JOINT">
+        <translate sid="translate">0 0 0</translate>
+        <rotate sid="jointOrientZ">0 0 1 90</rotate>
+        <rotate sid="jointOrientY">0 1 0 0</rotate>
+        <rotate sid="jointOrientX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <node id="_joint1_joint2" name="joint2" sid="joint2" type="JOINT">
+          <translate sid="translate">2 0 0</translate>
+          <rotate sid="jointOrientZ">0 0 1 0</rotate>
+          <rotate sid="jointOrientY">0 1 0 0</rotate>
+          <rotate sid="jointOrientX">1 0 0 0</rotate>
+          <rotate sid="rotateZ">0 0 1 0</rotate>
+          <scale sid="scale">1 1 1</scale>
+          <node id="_joint1_joint2_joint3" name="joint3" sid="joint3" type="JOINT">
+            <translate sid="translate">2 0 0</translate>
+            <rotate sid="jointOrientZ">0 0 1 0</rotate>
+            <rotate sid="jointOrientY">0 1 0 0</rotate>
+            <rotate sid="jointOrientX">1 0 0 0</rotate>
+            <rotate sid="rotateZ">0 0 1 0</rotate>
+            <scale sid="scale">1 1 1</scale>
+            <node id="_joint1_joint2_joint3_joint4" name="joint4" sid="joint4" type="JOINT">
+              <translate sid="translate">2 0 0</translate>
+              <rotate sid="jointOrientZ">0 0 1 -90</rotate>
+              <rotate sid="jointOrientY">0 1 0 0</rotate>
+              <rotate sid="jointOrientX">1 0 0 0</rotate>
+              <rotate sid="rotateZ">0 0 1 0</rotate>
+              <scale sid="scale">1 1 1</scale>
+              <extra>
+                <technique profile="OpenCOLLADAMaya">
+                  <originalMayaNodeId sid="originalMayaNodeId" type="string">joint4</originalMayaNodeId>
+                  <param sid="lockInfluenceWeights" type="bool">0</param>
+                </technique>
+              </extra>
+            </node>
+            <extra>
+              <technique profile="OpenCOLLADAMaya">
+                <originalMayaNodeId sid="originalMayaNodeId" type="string">joint3</originalMayaNodeId>
+                <param sid="lockInfluenceWeights" type="bool">0</param>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADAMaya">
+              <originalMayaNodeId sid="originalMayaNodeId" type="string">joint2</originalMayaNodeId>
+              <param sid="lockInfluenceWeights" type="bool">0</param>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId sid="originalMayaNodeId" type="string">joint1</originalMayaNodeId>
+            <param sid="lockInfluenceWeights" type="bool">0</param>
+          </technique>
+        </extra>
+      </node>
+      <node id="_nurbsCircle1" name="nurbsCircle1" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <scale sid="scale">1 1 1</scale>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId sid="originalMayaNodeId" type="string">nurbsCircle1</originalMayaNodeId>
+            <param sid="Bend" type="double">0</param>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <library_animations>
+    <animation id="joint2.rotateZ__joint1_joint2">
+      <source id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-input" name="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-input">
+        <float_array id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-input-array" count="3">-10 0 10 </float_array>
+        <technique_common>
+          <accessor source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-input-array" count="3" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+        <technique profile="OpenCOLLADAMaya">
+          <pre_infinity sid="pre_infinity">CONSTANT</pre_infinity>
+          <post_infinity sid="post_infinity">CONSTANT</post_infinity>
+        </technique>
+      </source>
+      <source id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-output" name="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-output">
+        <float_array id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-output-array" count="3">40 0 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-output-array" count="3" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-interpolation" name="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-interpolation">
+        <Name_array id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-interpolation-array" count="3">BEZIER BEZIER BEZIER </Name_array>
+        <technique_common>
+          <accessor source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-interpolation-array" count="3" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-intangent" name="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-intangent">
+        <float_array id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-intangent-array" count="6">-13.33333 40 -3.333333 13.33333 6.666666 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-intangent-array" count="3" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-outtangent" name="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-outtangent">
+        <float_array id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-outtangent-array" count="6">-6.666666 40 3.333333 -13.33333 13.33333 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-outtangent-array" count="3" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-sampler">
+        <input semantic="INPUT" source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-input"/>
+        <input semantic="OUTPUT" source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-output"/>
+        <input semantic="INTERPOLATION" source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-interpolation"/>
+        <input semantic="IN_TANGENT" source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-intangent"/>
+        <input semantic="OUT_TANGENT" source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-outtangent"/>
+      </sampler>
+      <channel source="#joint2.rotateZ__joint1_joint2_joint2.rotateZ__joint1_joint2-sampler" target="_joint1_joint2/rotateZ.ANGLE"/>
+    </animation>
+    <animation id="joint3.rotateZ__joint1_joint2_joint3">
+      <source id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-input" name="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-input">
+        <float_array id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-input-array" count="3">-10 0 10 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-input-array" count="3" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+        <technique profile="OpenCOLLADAMaya">
+          <pre_infinity sid="pre_infinity">CONSTANT</pre_infinity>
+          <post_infinity sid="post_infinity">CONSTANT</post_infinity>
+        </technique>
+      </source>
+      <source id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-output" name="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-output">
+        <float_array id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-output-array" count="3">40 0 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-output-array" count="3" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-interpolation" name="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-interpolation">
+        <Name_array id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-interpolation-array" count="3">BEZIER BEZIER BEZIER </Name_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-interpolation-array" count="3" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-intangent" name="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-intangent">
+        <float_array id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-intangent-array" count="6">-13.33333 40 -3.333333 13.33333 6.666666 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-intangent-array" count="3" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-outtangent" name="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-outtangent">
+        <float_array id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-outtangent-array" count="6">-6.666666 40 3.333333 -13.33333 13.33333 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-outtangent-array" count="3" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-sampler">
+        <input semantic="INPUT" source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-input"/>
+        <input semantic="OUTPUT" source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-output"/>
+        <input semantic="INTERPOLATION" source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-interpolation"/>
+        <input semantic="IN_TANGENT" source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-intangent"/>
+        <input semantic="OUT_TANGENT" source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-outtangent"/>
+      </sampler>
+      <channel source="#joint3.rotateZ__joint1_joint2_joint3_joint3.rotateZ__joint1_joint2_joint3-sampler" target="_joint1_joint2_joint3/rotateZ.ANGLE"/>
+    </animation>
+    <animation id="joint4.rotateZ__joint1_joint2_joint3_joint4">
+      <source id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-input" name="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-input">
+        <float_array id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-input-array" count="3">-10 0 10 </float_array>
+        <technique_common>
+          <accessor source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-input-array" count="3" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+        <technique profile="OpenCOLLADAMaya">
+          <pre_infinity sid="pre_infinity">CONSTANT</pre_infinity>
+          <post_infinity sid="post_infinity">CONSTANT</post_infinity>
+        </technique>
+      </source>
+      <source id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-output" name="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-output">
+        <float_array id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-output-array" count="3">40 0 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-output-array" count="3" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-interpolation" name="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-interpolation">
+        <Name_array id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-interpolation-array" count="3">BEZIER BEZIER BEZIER </Name_array>
+        <technique_common>
+          <accessor source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-interpolation-array" count="3" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-intangent" name="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-intangent">
+        <float_array id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-intangent-array" count="6">-13.33333 40 -3.333333 13.33333 6.666666 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-intangent-array" count="3" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-outtangent" name="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-outtangent">
+        <float_array id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-outtangent-array" count="6">-6.666666 40 3.333333 -13.33333 13.33333 -40 </float_array>
+        <technique_common>
+          <accessor source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-outtangent-array" count="3" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-sampler">
+        <input semantic="INPUT" source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-input"/>
+        <input semantic="OUTPUT" source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-output"/>
+        <input semantic="INTERPOLATION" source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-interpolation"/>
+        <input semantic="IN_TANGENT" source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-intangent"/>
+        <input semantic="OUT_TANGENT" source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-outtangent"/>
+      </sampler>
+      <channel source="#joint4.rotateZ__joint1_joint2_joint3_joint4_joint4.rotateZ__joint1_joint2_joint3_joint4-sampler" target="_joint1_joint2_joint3_joint4/rotateZ.ANGLE"/>
+    </animation>
+  </library_animations>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+  <extra>
+    <technique profile="COLLADA">
+      <source_data_base_uri>file:///D:/Work/maya/01_Class_Maya_prj/</source_data_base_uri>
+    </technique>
+  </extra>
+</COLLADA>
