@@ -115,7 +115,7 @@ editor/display_folded = false
 
 [node name="Enemy" parent="." index="3" instance=ExtResource( 3 )]
 
-transform = Transform( 0.2, 0, 0, 0, 0.2, -9.77884e-009, 0, 9.77884e-009, 0.2, 1.32808, 1.2168, 4.70141 )
+transform = Transform( 0.4, 0, 0, 0, 0.4, -1.95577e-008, 0, 1.95577e-008, 0.4, -1.75361, 0.430432, 3.66419 )
 
 [node name="Rynn" parent="." index="4" instance=ExtResource( 4 )]
 
