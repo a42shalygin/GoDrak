@@ -126,7 +126,7 @@ def indent(elem, level=0):
 if __name__ == '__main__':
     conv = RynnConverter()
     conv.get_animations(r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System'
-                                 r'\System [root]\Animations\Anim443 1handedRH.txt', 'Anim443_1handedRH')
+                                 r'\System [root]\Animations\Anim470 balance.txt', 'Anim470 balance')
     with open('tmp', 'w') as out_file:
         import xml.etree.ElementTree as ET
         for anim in conv.animations:
@@ -139,32 +139,36 @@ if __name__ == '__main__':
             source_output.set('id', fullname + '-output')
             source_interpolation = ET.SubElement(animation_tag, 'source')
             source_interpolation.set('id', fullname + '-interpolation')
-            sampler = ET.SubElement(animation_tag, 'source')
+            sampler = ET.SubElement(animation_tag, 'sampler')
             sampler.set('id', fullname + '-sampler')
-            channel = ET.SubElement(animation_tag, 'source')
+            channel = ET.SubElement(animation_tag, 'channel')
             channel.set('source', '#' + sampler.get('id'))
             channel.set('target', 'Armature_%s/transform' % anim.name)
 
-            input_array = ET.SubElement(source_input, 'float array')
+            input_array = ET.SubElement(source_input, 'float_array')
             input_array.set('id', fullname + '-input-array')
             input_array.set('count', str(len(anim.timestamps)))
             input_array.text = '\n' + '\n'.join(anim.timestamps) + '\n'
 
-            input_technique_common = ET.SubElement(source_input, 'technique common')
+            input_technique_common = ET.SubElement(source_input, 'technique_common')
             input_accessor = ET.SubElement(input_technique_common, 'accessor')
             input_accessor.set('source', '#' + input_array.get('id'))
             input_accessor.set('count', str(len(anim.timestamps)))
             input_accessor.set('stride', '1')
 
-            output_array = ET.SubElement(source_output, 'float array')
+            input_accessor_param = ET.SubElement(input_accessor, 'param')
+            input_accessor_param.set('name', 'TIME')
+            input_accessor_param.set('type', 'float')
+
+            output_array = ET.SubElement(source_output, 'float_array')
             output_array.set('id', fullname + '-output-array')
             output_array.set('count', str(len(anim.timestamps)*16))
             output_array.text = '\n'
             for an in anim.animations:
                 output_array.text += ' '.join(an) + '\n'
 
-            output_technique_common = ET.SubElement(source_output, 'technique common')
-            output_accessor = ET.SubElement(input_technique_common, 'accessor')
+            output_technique_common = ET.SubElement(source_output, 'technique_common')
+            output_accessor = ET.SubElement(output_technique_common, 'accessor')
             output_accessor.set('source', '#' + output_array.get('id'))
             output_accessor.set('count', str(len(anim.timestamps) * 16))
             output_accessor.set('stride', '16')
@@ -172,6 +176,34 @@ if __name__ == '__main__':
             output_accessor_param = ET.SubElement(output_accessor, 'param')
             output_accessor_param.set('name', 'TRANSFORM')
             output_accessor_param.set('type', 'float4x4')
+
+            interpolation_array = ET.SubElement(source_interpolation, 'Name_array')
+            interpolation_array.set('id', source_interpolation.get('id') + '-array')
+            interpolation_array.set('count', str(len(anim.timestamps)))
+            nametext = 'LINEAR ' * len(anim.timestamps)  #WORNG ELEMENTS NUMER IS PRINTED. NOT COUNT, TEXT!
+            interpolation_array.text = '\n' + '\n'.join(nametext.split(' '))
+
+            interpolation_technique_common = ET.SubElement(source_interpolation, 'technique_common')
+            interpolation_accessor = ET.SubElement(interpolation_technique_common, 'accessor')
+            interpolation_accessor.set('source', '#' + interpolation_array.get('id'))
+            interpolation_accessor.set('count', str(len(anim.timestamps)))
+            interpolation_accessor.set('stride', '1')
+
+            interpolation_accessor_param = ET.SubElement(interpolation_accessor, 'param')
+            interpolation_accessor_param.set('name', 'INTERPOLATION')
+            interpolation_accessor_param.set('type', 'name')
+
+            sampler_input = ET.SubElement(sampler, 'input')
+            sampler_input.set('semantic', 'INPUT')
+            sampler_input.set('source', '#' + source_input.get('id'))
+            sampler_output = ET.SubElement(sampler, 'input')
+            sampler_output.set('semantic', 'OUTPUT')
+            sampler_output.set('source', '#' + source_output.get('id'))
+            sampler_interpolation = ET.SubElement(sampler, 'input')
+            sampler_interpolation.set('semantic', 'INTERPOLATION')
+            sampler_interpolation.set('source', '#' + source_interpolation.get('id'))
+
+
 
             indent(animation_tag)
             out_file.write(ET.tostring(animation_tag))
