@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Stick.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/R_Leather.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Village.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/R_Leather.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Village.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=1]
 
@@ -88,12 +89,11 @@ _sections_unfolded = [ "Ambient Light" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
-editor/display_folded = true
 environment = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="WorldEnvironment" index="0"]
 
-transform = Transform( 0.357476, 0.446313, -0.820376, -0.178288, 0.894877, 0.409155, 0.916747, 0, 0.399469, -3.22703, 1.49936, 3.93374 )
+transform = Transform( 0.357476, 0.446313, -0.820376, -0.178288, 0.894877, 0.409155, 0.916747, 0, 0.399469, -4.0482, 1.57466, 3.43826 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -111,8 +111,15 @@ far = 100.0
 
 [node name="Player" parent="." index="2" instance=ExtResource( 2 )]
 
-[node name="Rynn" parent="." index="3" instance=ExtResource( 3 )]
+editor/display_folded = false
 
+[node name="Enemy" parent="." index="3" instance=ExtResource( 3 )]
+
+transform = Transform( 0.2, 0, 0, 0, 0.2, -9.77884e-009, 0, 9.77884e-009, 0.2, 1.32808, 1.2168, 4.70141 )
+
+[node name="Rynn" parent="." index="4" instance=ExtResource( 4 )]
+
+editor/display_folded = true
 transform = Transform( -2.55166, 0, -1.57766, 0, 3, 0, 1.57766, 0, -2.55166, -1.39256, 0.819312, 1.48344 )
 _sections_unfolded = [ "Transform" ]
 
@@ -129,7 +136,13 @@ _sections_unfolded = [ "bones", "bones/6", "bones/7" ]
 
 _sections_unfolded = [ "Directional Shadow", "Light", "Shadow", "Visibility" ]
 
-[node name="Village" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Village" parent="." index="5" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+
+[node name="Floor" parent="Village" index="0"]
+
+editor/display_folded = false
 
 [node name="Torch" parent="Village/House2/Interior" index="1"]
 
