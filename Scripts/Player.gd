@@ -39,7 +39,7 @@ func _process(delta):
 	var direction = Vector3(0,0,0)
 	
 	
-	if not Input.is_key_pressed(KEY_Z):
+	if Input.is_key_pressed(KEY_Z):
 		mouseCapture = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	else:
@@ -65,7 +65,7 @@ func _process(delta):
 		direction += Vector3(-cameraDirection.z, 0, cameraDirection.x)
 		
 	if Input.is_key_pressed(KEY_SHIFT):
-		run = 2
+		run = 5
 	else:
 		run = 1
 	
