@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Stick.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/house_1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Interior.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Animated_Column.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Environment" id=1]
 
@@ -136,17 +137,21 @@ _sections_unfolded = [ "Directional Shadow", "Light", "Shadow", "Visibility" ]
 
 [node name="Village" parent="." index="4" instance=ExtResource( 4 )]
 
+[node name="Floor" parent="Village" index="0"]
+
+editor/display_folded = false
+
 [node name="MeshInstance" parent="Village/Floor/Spatial" index="0"]
 
 transform = Transform( 10.0892, 0, 0, 0, 1, 0, 0, 0, 3.40391, 0, 0, 0 )
 
-[node name="House2" parent="Village" index="2"]
-
-editor/display_folded = false
-
 [node name="Torch" parent="Village/House2/Interior" index="1"]
 
 light_cull_mask = -1
+
+[node name="Ramp" parent="Village" index="3"]
+
+editor/display_folded = false
 
 [node name="Sun" parent="Village" index="4"]
 
@@ -175,12 +180,36 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Torch" parent="SmallClosedHouse/Interior" index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33411, 1.33572, 1.1914 )
 light_indirect_energy = 5.0
 light_cull_mask = -1
+
+[node name="Animated_Column" parent="." index="8" instance=ExtResource( 8 )]
+
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -7.04367, 0, 9.11221 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationTreePlayer" parent="Animated_Column" index="2"]
+
+data = {
+"active": false,
+"connections": [ "anim", "out", 0 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"filter": [  ],
+"from": "default",
+"id": "anim",
+"position": Vector2( 91, 93 ),
+"type": "animation"
+}, {
+"id": "out",
+"position": Vector2( 407, 106 ),
+"type": "output"
+} ]
+}
 
 
 [editable path="Rynn"]
 [editable path="Village"]
 [editable path="ClosedHouse"]
 [editable path="SmallClosedHouse/Interior"]
+[editable path="Animated_Column"]
