@@ -14,6 +14,7 @@ var minScale = Vector3(0.2, 0.2, 0.2)
 var maxScale = Vector3(2, 2, 2)
 var maxRoll = 0.3
 var mouseCapture = false
+var mouseCaptureTimer = 0
 var freelook = false
 var gimbalNode
 var yawNode
@@ -40,11 +41,16 @@ func _process(delta):
 	
 	
 	if Input.is_key_pressed(KEY_Z):
-		mouseCapture = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	else:
-		mouseCapture = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		mouseCaptureTimer += delta
+		
+	if mouseCaptureTimer >= 0.1:
+		if not mouseCapture:
+			mouseCapture = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+		else:
+			mouseCapture = false
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		mouseCaptureTimer = 0
 	
 	freelook = Input.is_key_pressed(KEY_ALT)
 
