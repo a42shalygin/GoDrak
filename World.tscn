@@ -328,6 +328,21 @@ _sections_unfolded = [ "Transform" ]
 [node name="StaticBody" parent="Animated_Column/Skeleton/pCube1" index="0"]
 physics_material_override = SubResource( 16 )
 
+[node name="Physical Bone joint1" parent="Animated_Column/Skeleton" index="1"]
+transform = Transform( 1, 0, 0, 0, -3.92058e-008, -0.896923, 0, 1, -4.37114e-008, 0, 1.01744, 0 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.95848e-008, 1.13437 )
+body_offset = Transform( 0, -3.92058e-008, -0.896923, -1, 0, 0, 0, 1, -4.37114e-008, 1.01744, 0, 0 )
+
+[node name="Physical Bone joint2" parent="Animated_Column/Skeleton" index="2"]
+transform = Transform( -4.37114e-008, -1, 0, -4.37114e-008, 1.91069e-015, -1, 1, -4.37114e-008, -4.37114e-008, 0, 2.97696, 0 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27043e-008, -1.86667e-015, 0.976961 )
+body_offset = Transform( -4.37114e-008, 1.91069e-015, -1, 4.37114e-008, 1, 0, 1, -4.37114e-008, -4.37114e-008, 0.976961, 0, 0 )
+
+[node name="Physical Bone joint3" parent="Animated_Column/Skeleton" index="3"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 5.00169, 0 )
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.37853e-008, 1.00169 )
+body_offset = Transform( 0, -4.37114e-008, -1, -1, 0, 0, 0, 1, -4.37114e-008, 1.00169, 0, 0 )
+
 [node name="AnimationTreePlayer" parent="Animated_Column" index="2"]
 data = {
 "active": false,
