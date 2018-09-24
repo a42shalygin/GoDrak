@@ -42,6 +42,8 @@ func _process(delta):
 	
 	if Input.is_key_pressed(KEY_Z):
 		mouseCaptureTimer += delta
+	else:
+		mouseCaptureTimer = 0
 		
 	if mouseCaptureTimer >= 0.1:
 		if not mouseCapture:
