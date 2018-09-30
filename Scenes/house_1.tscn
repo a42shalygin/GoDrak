@@ -6,7 +6,7 @@
 [ext_resource path="res://Models/house_1/House_1_d.tga" type="Texture" id=4]
 [ext_resource path="res://Models/house_1/House_1_m.tga" type="Texture" id=5]
 [ext_resource path="res://Models/house_1/House_1_n.tga" type="Texture" id=6]
-[ext_resource path="res://Models/house_1/House_1_g.tga" type="Texture" id=7]
+[ext_resource path="res://Models/house_1/House_1_g_test.tga" type="Texture" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -91,7 +91,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Depth", "Metallic" ]
+_sections_unfolded = [ "Depth", "Metallic", "Roughness" ]
 
 [node name="Scene Root" type="Spatial" index="0"]
 
