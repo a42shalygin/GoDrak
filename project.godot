@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GoDrak"
+config/name="GoDrak_3.1"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
