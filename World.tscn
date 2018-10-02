@@ -89,7 +89,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light" ]
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -118,6 +118,7 @@ far = 100.0
 
 [node name="Rynn" parent="." index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform = Transform( -2.55166, 0, -1.57766, 0, 3, 0, 1.57766, 0, -2.55166, -1.39256, 0.819312, 1.48344 )
 _sections_unfolded = [ "Transform" ]
 
