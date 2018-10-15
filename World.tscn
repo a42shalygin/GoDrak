@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Stick.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Sviborg.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Fireball.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Ice_Cube.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/house_1_interior.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Environment" id=1]
 
@@ -182,17 +183,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6736, 23.2207, 1.37961 )
 light_cull_mask = -1
 omni_range = 200.0
 
-[node name="Scene Root2" type="Spatial" parent="." index="9" instance=ExtResource( 9 )]
+[node name="Scene Root2" parent="." index="9" instance=ExtResource( 9 )]
 
 transform = Transform( -0.939806, 0, -0.341707, 0, 1, 0, 0.341707, 0, -0.939806, -47.8876, 0.423643, 10.2736 )
 
-[node name="Scene Root3" type="Spatial" parent="." index="10" instance=ExtResource( 10 )]
+[node name="Scene Root3" parent="." index="10" instance=ExtResource( 10 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1647, 0.276747, 12.2404 )
 
-[node name="Scene Root" type="Spatial" parent="." index="11" instance=ExtResource( 11 )]
+[node name="Scene Root" parent="." index="11" instance=ExtResource( 11 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.1533, -1.49012e-007, 10.8819 )
+
+[node name="Scene Root4" parent="." index="12" instance=ExtResource( 12 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4585, 0, -8.36755 )
 
 
 [editable path="Rynn"]
