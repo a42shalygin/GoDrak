@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="BoxShape" id=26]
+[sub_resource type="BoxShape" id=2]
 
 extents = Vector3( 1, 1, 1 )
 
-[sub_resource type="CubeMesh" id=27]
+[sub_resource type="CubeMesh" id=1]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector3( 2, 2, 2 )
@@ -14,28 +14,34 @@ subdivide_depth = 0
 
 [node name="Stick" type="Spatial"]
 
-editor/display_folded = true
 transform = Transform( 0.0250689, 0, 0, 0, 0.0153678, -0.0121955, 0, 0.000158696, 0.499938, 0, 1.87736, 3.46397 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Body" type="StaticBody" parent="." index="0"]
+[node name="Body" type="KinematicBody" parent="." index="0" groups=[
+"Weapon",
+]]
 
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
 collision_mask = 1
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+collision/safe_margin = 0.001
 
 [node name="CollisionShape" type="CollisionShape" parent="Body" index="0"]
 
-shape = SubResource( 26 )
+transform = Transform( 1, 0, 0, 0, 0.999955, -0.143135, 0, -5.72546e-005, 0.819632, 0, -0.146126, -0.184098 )
+shape = SubResource( 2 )
 disabled = false
 
-[node name="MeshInstance" type="MeshInstance" parent="Body/CollisionShape" index="0"]
+[node name="MeshInstance" type="MeshInstance" parent="Body" index="1"]
 
+transform = Transform( 1, 0, 0, 0, 1, 1.78814e-007, 0, -2.91038e-011, 1, 0, 0, -4.76837e-007 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -45,7 +51,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 27 )
+mesh = SubResource( 1 )
 skeleton = NodePath("..")
 material/0 = null
 
