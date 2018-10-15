@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Textures/ball.jpg" type="Texture" id=2]
@@ -70,9 +70,12 @@ is_hemisphere = false
 
 radius = 1.0
 
-[node name="Player" type="KinematicBody" index="0"]
+[sub_resource type="SphereShape" id=4]
 
-editor/display_folded = true
+radius = 1.0
+
+[node name="Player" type="KinematicBody"]
+
 transform = Transform( 0.2, 0, 0, 0, 0.200001, 7.91624e-009, 0, 9.77889e-009, 0.2, 0, 1.53387, 3.74737 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -140,5 +143,37 @@ size = 1.0
 near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Area" type="Area" parent="." index="3"]
+
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0 )
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
+
+shape = SubResource( 4 )
+disabled = false
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
 

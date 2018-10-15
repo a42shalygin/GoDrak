@@ -170,3 +170,10 @@ func _process(delta):
 		elif isRolledRight == false and not Input.is_key_pressed(KEY_Q):
 			rollNode.rotate_z(-0.005)
 			
+	
+	$Stick/Body.move_and_collide(Vector3(0,0,0))
+
+
+func _on_Area_body_entered(body):
+	if body.is_in_group("Weapon"):
+		self.queue_free()

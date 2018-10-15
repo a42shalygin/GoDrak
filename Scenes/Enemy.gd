@@ -46,5 +46,6 @@ func _process(delta):
 	
 
 func _on_Area_body_entered(body):
-	if body.name == "Player":
+#	if body.name == "Player":
+	if body.is_in_group("Weapon"):
 		self.queue_free()
