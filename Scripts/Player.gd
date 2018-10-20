@@ -10,7 +10,7 @@ var cameraDirection
 var initMouse = Vector2(500,200)
 var lastMouse = initMouse
 var mousespeed = 0.001
-var minScale = Vector3(0.2, 0.2, 0.2)
+var minScale = Vector3(0, 0, 0)
 var maxScale = Vector3(2, 2, 2)
 var maxRoll = 0.3
 var mouseCapture = false
@@ -171,7 +171,7 @@ func _process(delta):
 			rollNode.rotate_z(-0.005)
 			
 	
-	$Stick/Body.move_and_collide(Vector3(0,0,0))
+#	$Stick/Body.move_and_collide(Vector3(0,0,0))
 
 
 func _on_Area_body_entered(body):
