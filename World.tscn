@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scenes/Weapon/Stick.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,9 @@
 [ext_resource path="res://Scenes/Buildings/House_1_Collision_test.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Misc/Fireball.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/World/sky.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Misc/CartM.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Misc/CartL.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Characters/DeadMan.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Environment" id=1]
 
@@ -695,7 +698,7 @@ far = 100.0
 
 [node name="Stick" parent="." index="1" instance=ExtResource( 1 )]
 
-transform = Transform( 0.0250689, 0, 0, 0, 0.0153678, -0.0121955, 0, 0.000158696, 0.499938, 1.82, 0.54736, 3.46397 )
+transform = Transform( 0.01, 0, 0, 0, 0.00968547, 0.0746493, 0, -0.00248831, 0.290564, -2.77, 0.60736, -2.31603 )
 
 [node name="Player" parent="." index="2" instance=ExtResource( 2 )]
 
@@ -933,6 +936,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Swyborg" parent="." index="6" instance=ExtResource( 9 )]
 
+editor/display_folded = true
 transform = Transform( -0.939806, 0, -0.341707, 0, 1, 0, 0.341707, 0, -0.939806, 8.5024, 0.423643, 10.2736 )
 
 [node name="Ice" parent="." index="7" instance=ExtResource( 10 )]
@@ -941,6 +945,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3667, -1.49012e-007, 10.8819
 
 [node name="House_open" type="Spatial" parent="." index="8"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2722, -0.144209, -4.98505 )
 
 [node name="Glass" type="MeshInstance" parent="House_open" index="0"]
@@ -1135,17 +1140,32 @@ disabled = false
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.88 )
 
-[node name="Scene Root" parent="." index="11" instance=ExtResource( 18 )]
+[node name="Sun" parent="." index="11" instance=ExtResource( 18 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 13.61, 0 )
 
 [node name="Sky" parent="." index="12" instance=ExtResource( 19 )]
 
+editor/display_folded = true
 transform = Transform( 40, 0, 0, 0, -1.74846e-006, -40, 0, 40, -1.74846e-006, 0, 2.42, 0 )
 
 [node name="Point" parent="Sky" index="2"]
 
 visible = false
+light_cull_mask = -1
+
+[node name="CArtM" parent="." index="13" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 5.45, 0, 0 )
+
+[node name="CartL" parent="." index="14" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 5.45, 0, -1.49 )
+
+[node name="DeadMan" parent="." index="15" instance=ExtResource( 22 )]
+
+transform = Transform( -4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, -4.82963, -2.8, 0.05, -3.5 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="House_open/Interior" to="House_open/Interior" method="_on_Interior_body_entered"]
 
