@@ -632,7 +632,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0.341126, 0.828125, 0.164978, 1 )
+albedo_color = Color( 0.322342, 0.488281, 0.12207, 1 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -673,7 +673,7 @@ subdivide_depth = 0
 
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -1146,7 +1146,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 13.61, 0 )
 
 [node name="Sky" parent="." index="12" instance=ExtResource( 19 )]
 
-editor/display_folded = true
 transform = Transform( 40, 0, 0, 0, -1.74846e-006, -40, 0, 40, -1.74846e-006, 0, 2.42, 0 )
 
 [node name="Point" parent="Sky" index="2"]
