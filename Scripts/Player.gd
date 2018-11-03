@@ -25,6 +25,9 @@ var velocity = Vector3()
 var run = 1
 var doubleJumpDone = false
 
+var shield
+var weapon
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -34,7 +37,11 @@ func _ready():
 	rollNode = get_node("Gimbal/yaw/pitch/roll")
 	cameraNode = get_node("Gimbal/yaw/pitch/roll/Camera")
 	
+	shield = load("res://Scenes/World/shield.tscn").instance()
+	$LH_slot.add_child(shield)
 	
+	weapon = load("res://Scenes/Weapon/Stick.tscn").instance()
+	$RH_slot.add_child(weapon)
 	
 func _process(delta):
 	var direction = Vector3(0,0,0)

@@ -74,7 +74,7 @@ radius = 1.0
 
 radius = 1.0
 
-[node name="Player" type="KinematicBody" index="0"]
+[node name="Player" type="KinematicBody"]
 
 transform = Transform( 0.2, 0, 0, 0, 0.200001, 7.91624e-009, 0, 9.77889e-009, 0.2, 0, 1.53387, 3.74737 )
 input_ray_pickable = true
@@ -196,6 +196,14 @@ _sections_unfolded = [ "Transform" ]
 
 shape = SubResource( 4 )
 disabled = false
+
+[node name="RH_slot" type="Spatial" parent="." index="4"]
+
+transform = Transform( 0.999999, 0, 0, 0, 1, 1.06581e-014, 0, -1.06581e-014, 0.999999, 1.05, 9.53674e-007, -1.55 )
+
+[node name="LH_slot" type="Spatial" parent="." index="5"]
+
+transform = Transform( 0.999999, 0, 0, 0, 1, 1.77636e-014, 0, -1.06581e-014, 0.999999, -1.4, 9.53674e-007, -1.55 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
