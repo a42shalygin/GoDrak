@@ -19,9 +19,9 @@
 [ext_resource path="res://Scenes/Buildings/House_1_Collision_test.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Misc/Fireball.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/World/sky.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Misc/CartM.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/Misc/CartL.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Characters/DeadMan.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Characters/DeadMan.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Misc/CartM.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Misc/CartL.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Environment" id=1]
 
@@ -673,7 +673,7 @@ subdivide_depth = 0
 
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 
@@ -1154,18 +1154,18 @@ transform = Transform( 40, 0, 0, 0, -1.74846e-006, -40, 0, 40, -1.74846e-006, 0,
 visible = false
 light_cull_mask = -1
 
-[node name="CArtM" parent="." index="13" instance=ExtResource( 20 )]
-
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 5.45, 0, 0 )
-
-[node name="CartL" parent="." index="14" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 5.45, 0, -1.49 )
-
-[node name="DeadMan" parent="." index="15" instance=ExtResource( 22 )]
+[node name="DeadMan" parent="." index="13" instance=ExtResource( 20 )]
 
 transform = Transform( -4.82963, 0, 1.2941, 0, 5, 0, -1.2941, 0, -4.82963, -2.8, 0.05, -3.5 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="CArtM" parent="." index="14" instance=ExtResource( 21 )]
+
+transform = Transform( 5, 0, 0, 0, -2.18557e-007, -5, 0, 5, -2.18557e-007, 4.87, 0, 0 )
+
+[node name="CartL" parent="." index="15" instance=ExtResource( 22 )]
+
+transform = Transform( 5, 0, 0, 0, -2.18557e-007, -5, 0, 5, -2.18557e-007, 4.69, 0, 2.97 )
 
 [connection signal="body_entered" from="House_open/Interior" to="House_open/Interior" method="_on_Interior_body_entered"]
 
