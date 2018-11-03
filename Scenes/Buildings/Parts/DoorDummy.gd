@@ -12,9 +12,6 @@ func _ready():
 #	player.get_volume_db()
 #	player.play()
 
-func _process(delta):
-	print(player.is_playing())
-
 
 func _on_Area_body_entered(body):
 		
