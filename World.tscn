@@ -19,8 +19,6 @@
 [ext_resource path="res://Scenes/Misc/CartM.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Misc/CartL.tscn" type="PackedScene" id=18]
 
-
-
 [sub_resource type="Environment" id=1]
 
 background_mode = 0
@@ -543,7 +541,7 @@ _sections_unfolded = [ "Albedo", "Metallic", "Refraction", "Roughness" ]
 
 data = PoolVector3Array( 4.418, 3.8164, -0.25, 4.418, 5.8164, 0.25, 4.418, 3.8164, 0.25, 4.418, 3.8164, -0.25, 4.418, 5.8164, -0.25, 4.418, 5.8164, 0.25, 4.4375, 3.8164, -0.25, 4.4375, 5.8164, 0.25, 4.4375, 5.8164, -0.25, 4.4375, 3.8164, -0.25, 4.4375, 3.8164, 0.25, 4.4375, 5.8164, 0.25, 4.4375, 3.8164, -0.25, 4.418, 5.8164, -0.25, 4.418, 3.8164, -0.25, 4.4375, 3.8164, -0.25, 4.4375, 5.8164, -0.25, 4.418, 5.8164, -0.25, 4.4375, 5.8164, -0.25, 4.418, 5.8164, 0.25, 4.418, 5.8164, -0.25, 4.4375, 5.8164, -0.25, 4.4375, 5.8164, 0.25, 4.418, 5.8164, 0.25, 4.4375, 5.8164, 0.25, 4.418, 3.8164, 0.25, 4.418, 5.8164, 0.25, 4.4375, 5.8164, 0.25, 4.4375, 3.8164, 0.25, 4.418, 3.8164, 0.25, 4.4375, 3.8164, 0.25, 4.418, 3.8164, -0.25, 4.418, 3.8164, 0.25, 4.4375, 3.8164, 0.25, 4.4375, 3.8164, -0.25, 4.418, 3.8164, -0.25 )
 
-[sub_resource type="SpatialMaterial" id=20]
+[sub_resource type="SpatialMaterial" id=14]
 
 render_priority = 0
 flags_transparent = false
@@ -595,15 +593,15 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="PlaneMesh" id=21]
+[sub_resource type="PlaneMesh" id=15]
 
-material = SubResource( 20 )
+material = SubResource( 14 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector2( 2, 2 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[sub_resource type="ConvexPolygonShape" id=22]
+[sub_resource type="ConvexPolygonShape" id=16]
 
 points = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1 )
 
@@ -978,6 +976,27 @@ playback_speed = 1.0
 anims/default = SubResource( 10 )
 blend_times = [  ]
 
+[node name="OmniLight" type="OmniLight" parent="Rynn" index="2"]
+
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+
 [node name="Enemy" parent="." index="5" instance=ExtResource( 9 )]
 
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.98, 0.660053, -1.13 )
@@ -1060,7 +1079,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 21 )
+mesh = SubResource( 15 )
 skeleton = NodePath("..")
 material/0 = null
 
@@ -1077,7 +1096,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor/Spatial/MeshInstance/StaticBody" index="0"]
 
-shape = SubResource( 22 )
+shape = SubResource( 16 )
 disabled = false
 
 [node name="Sun" parent="." index="11" instance=ExtResource( 14 )]
@@ -1105,6 +1124,29 @@ transform = Transform( 5, 0, 0, 0, -2.18557e-007, -5, 0, 5, -2.18557e-007, 4.87,
 [node name="CartL" parent="." index="15" instance=ExtResource( 18 )]
 
 transform = Transform( 5, 0, 0, 0, -2.18557e-007, -5, 0, 5, -2.18557e-007, 4.69, 0, 2.97 )
+
+[node name="OmniLight" type="OmniLight" parent="." index="16"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 2 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 5.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light" ]
 
 [connection signal="body_entered" from="Player2/Area" to="Player2" method="_on_Area_body_entered"]
 
