@@ -66,7 +66,20 @@ class RynnConverter(object):
                     data = re.findall('(-?\\d+\\.\\d+)', line)
                     if data and current_bone:
                         current_bone.timestamps.append(data[0])
-                        an = data[1:] + ['0', '0', '0', '1']
+                        an = []
+                        an.append(data[1])
+                        an.append(data[4])
+                        an.append(data[7])
+                        an.append(data[10])
+                        an.append(data[2])
+                        an.append(data[5])
+                        an.append(data[8])
+                        an.append(data[11])
+                        an.append(data[3])
+                        an.append(data[6])
+                        an.append(data[9])
+                        an.append(data[12])
+                        an = an + ['0', '0', '0', '1']
                         current_bone.animations.append(an)
 
         self.animations = animations
