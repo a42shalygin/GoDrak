@@ -12,12 +12,14 @@
 [ext_resource path="res://Scenes/Buildings/Animated_Column.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Characters/Sviborg.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Misc/Ice_Cube.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Models/house_1_interior/lambert1.material" type="Material" id=13]
+[ext_resource path="res://Models/Material0-material_001.material" type="Material" id=13]
 [ext_resource path="res://Scenes/Misc/Fireball.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/World/sky.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Characters/DeadMan.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Misc/CartM.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Misc/CartL.tscn" type="PackedScene" id=18]
+
+
 
 [sub_resource type="Environment" id=1]
 
