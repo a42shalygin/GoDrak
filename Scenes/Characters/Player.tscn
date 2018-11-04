@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Textures/ball.jpg" type="Texture" id=2]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="SpatialMaterial" id=19]
 
 render_priority = 0
 flags_transparent = false
@@ -56,9 +56,9 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Refraction" ]
 
-[sub_resource type="SphereMesh" id=2]
+[sub_resource type="SphereMesh" id=20]
 
-material = SubResource( 1 )
+material = SubResource( 19 )
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 radius = 1.0
 height = 2.0
@@ -74,7 +74,7 @@ radius = 1.0
 
 radius = 1.0
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" index="0"]
 
 transform = Transform( 0.2, 0, 0, 0, 0.200001, 7.91624e-009, 0, 9.77889e-009, 0.2, 0, 1.53387, 3.74737 )
 input_ray_pickable = true
@@ -90,6 +90,7 @@ axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
+controlled = false
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
@@ -102,7 +103,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
+mesh = SubResource( 20 )
 skeleton = NodePath("..")
 material/0 = null
 
@@ -199,11 +200,11 @@ disabled = false
 
 [node name="RH_slot" type="Spatial" parent="." index="4"]
 
-transform = Transform( 0.999999, 0, 0, 0, 1, 1.06581e-014, 0, -1.06581e-014, 0.999999, 1.05, 9.53674e-007, -1.55 )
+transform = Transform( 0.999999, 0, 0, 0, 1, 1.77636e-014, 0, -1.06581e-014, 0.999999, 2.1, 9.53674e-007, -1.55 )
 
 [node name="LH_slot" type="Spatial" parent="." index="5"]
 
-transform = Transform( 0.999999, 0, 0, 0, 1, 1.77636e-014, 0, -1.06581e-014, 0.999999, -1.4, 9.53674e-007, -1.55 )
+transform = Transform( 0.999999, 0, 0, 0, 1, 2.84217e-014, 0, -1.06581e-014, 0.999999, -1.75, 9.53674e-007, -1.55 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 

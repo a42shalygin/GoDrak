@@ -1,10 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="BoxShape" id=1]
-
-extents = Vector3( 1, 1, 1 )
-
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="CubeMesh" id=1]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector3( 2, 2, 2 )
@@ -12,16 +8,14 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="Stick" type="Spatial"]
+[sub_resource type="BoxShape" id=2]
 
-transform = Transform( 0.0250689, 0, 0, 0, 0.0153678, -0.0121955, 0, 0.000158696, 0.499938, 0, 0, 0 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+extents = Vector3( 1, 1, 1 )
 
-[node name="Body" type="KinematicBody" parent="." index="0" groups=[
+[node name="Stick" type="KinematicBody" index="0" groups=[
 "Weapon",
 ]]
 
-transform = Transform( 2.7125, 0, 0, 0, 1.75054, 1.70179, 0, 0.000680719, 3.89446, 0, 0.698256, -4.12011 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -33,17 +27,11 @@ axis_lock_angular_x = false
 axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="CollisionShape" type="CollisionShape" parent="Body" index="0"]
+[node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( 1, 0, 0, 0, 0.999955, -0.143135, 0, -5.72546e-005, 0.819632, 0, -0.146126, -0.184098 )
-shape = SubResource( 1 )
-disabled = false
-
-[node name="MeshInstance" type="MeshInstance" parent="Body" index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 1.78814e-007, 0, -2.91038e-011, 1, 0, 0, -4.76837e-007 )
+transform = Transform( 0.065, 0, 0, 0, 0.06075, 0, 0, 0, 1, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -53,8 +41,14 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
+mesh = SubResource( 1 )
 skeleton = NodePath("..")
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="1"]
+
+transform = Transform( 0.065, 0, 0, 0, 0.06075, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )
+disabled = false
 
 
