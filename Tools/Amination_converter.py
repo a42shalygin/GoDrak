@@ -67,19 +67,36 @@ class RynnConverter(object):
                     if data and current_bone:
                         current_bone.timestamps.append(data[0])
                         an = []
+                        # an.append(data[1])
+                        # an.append(data[4])
+                        # an.append(data[7])
+                        # an.append(data[7])
+                        # an.append(data[10])
+                        # an.append(data[2])
+                        # an.append(data[5])
+                        # an.append(data[8])
+                        # an.append(data[11])
+                        # an.append(data[3])
+                        # an.append(data[6])
+                        # an.append(data[9])
+                        # an.append(data[12])
+                        # an = an + ['0', '0', '0', '1']
                         an.append(data[1])
-                        an.append(data[4])
-                        an.append(data[7])
-                        an.append(data[10])
                         an.append(data[2])
-                        an.append(data[5])
-                        an.append(data[8])
-                        an.append(data[11])
                         an.append(data[3])
+                        an.append("0")
+                        an.append(data[4])
+                        an.append(data[5])
                         an.append(data[6])
+                        an.append("0")
+                        an.append(data[7])
+                        an.append(data[8])
                         an.append(data[9])
+                        an.append("0")
+                        an.append(data[10])
+                        an.append(data[11])
                         an.append(data[12])
-                        an = an + ['0', '0', '0', '1']
+                        an.append("1")
                         current_bone.animations.append(an)
 
         self.animations = animations
@@ -138,8 +155,7 @@ def indent(elem, level=0):
 
 if __name__ == '__main__':
     conv = RynnConverter()
-    conv.get_animations(r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System'
-                                 r'\System [root]\Animations\Anim470 balance.txt', 'Anim470 balance')
+    conv.get_animations(r"C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim507 run.txt", 'Anim507_run')
     with open('tmp', 'w') as out_file:
         import xml.etree.ElementTree as ET
         for anim in conv.animations:
