@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Models/Location/House_1/House_1.dae" type="PackedScene" id=1]
-[ext_resource path="res://Models/Location/House_1/House_1i_a.tga" type="Texture" id=2]
-[ext_resource path="res://Models/Location/House_1/House_1i_m.tga" type="Texture" id=3]
-[ext_resource path="res://Models/Location/House_1/House_1i_n.tga" type="Texture" id=4]
+[ext_resource path="res://Models/Location/House_1/House_1_DefaultMaterial_BaseColor.png" type="Texture" id=2]
+[ext_resource path="res://Models/Location/House_1/House_1_DefaultMaterial_AO.png" type="Texture" id=3]
+[ext_resource path="res://Models/Location/House_1/House_1_DefaultMaterial_Metallic.png" type="Texture" id=4]
+[ext_resource path="res://Models/Location/House_1/House_1_DefaultMaterial_Normal.png" type="Texture" id=5]
+[ext_resource path="res://Models/Location/House_1/House_1_DefaultMaterial_Roughness.png" type="Texture" id=6]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -30,20 +32,25 @@ params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
 albedo_texture = ExtResource( 2 )
-metallic = 0.0
+metallic = 1.0
 metallic_specular = 0.5
-metallic_texture = ExtResource( 3 )
+metallic_texture = ExtResource( 4 )
 metallic_texture_channel = 0
-roughness = 0.0
+roughness = 1.0
+roughness_texture = ExtResource( 6 )
 roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = true
 normal_scale = 1.0
-normal_texture = ExtResource( 4 )
+normal_texture = ExtResource( 5 )
 rim_enabled = false
 clearcoat_enabled = false
 anisotropy_enabled = false
-ao_enabled = false
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource( 3 )
+ao_on_uv2 = false
+ao_texture_channel = 0
 depth_enabled = false
 subsurf_scatter_enabled = false
 transmission_enabled = false
@@ -59,7 +66,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Metallic", "NormalMap", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Ambient Occlusion", "Metallic", "NormalMap", "Roughness" ]
 
 [node name="Scene Root" index="0" instance=ExtResource( 1 )]
 
