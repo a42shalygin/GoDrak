@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/Stick.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/Misc/CartM.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Misc/CartL.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Buildings/House_1_interior.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Weapon/Sword_Short_1.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Environment" id=1]
 
@@ -631,7 +632,6 @@ far = 100.0
 
 [node name="Spear" type="Spatial" parent="." index="1"]
 
-editor/display_folded = true
 transform = Transform( 0.01, 0, 0, 0, 0.00968547, 0.0746493, 0, -0.00248831, 0.290564, -2.77, 0.60736, -2.31603 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
@@ -662,7 +662,7 @@ disabled = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Spear/Body" index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 1.78814e-007, 0, -2.91038e-011, 1, 0, 0, -4.76837e-007 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, -4.65661e-010, 1, 0, 0, -4.76837e-007 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -1152,6 +1152,11 @@ _sections_unfolded = [ "Light" ]
 [node name="Scene Root" parent="." index="17" instance=ExtResource( 19 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0372441, -12 )
+
+[node name="Scene Root2" type="Spatial" parent="." index="18" instance=ExtResource( 20 )]
+
+transform = Transform( 0.734808, -6.4239e-008, -0.678275, -8.74228e-008, -1, 0, -0.678275, 5.92967e-008, -0.734808, -2.23463, 0.0198118, -3.06462 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="Player2/Area" to="Player2" method="_on_Area_body_entered"]
 
