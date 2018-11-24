@@ -1324,7 +1324,7 @@
   
     <library_animation_clips>
   
-	<animation_clip id="testID" name="default" end="0.4'>
+	<animation_clip id="testID" name="all" end="0.4">
 		<instance_animation url="#joint2.rotateZ__joint1_joint2"/>
 		<instance_animation url="#joint3.rotateZ__joint1_joint2_joint3"/>
 		<instance_animation url="#joint4.rotateZ__joint1_joint2_joint3_joint4"/>
