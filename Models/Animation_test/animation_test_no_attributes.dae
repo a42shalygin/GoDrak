@@ -1321,6 +1321,21 @@
       <channel source="#joint4.visibility__joint1_joint2_joint3_joint4_joint4.visibility__joint1_joint2_joint3_joint4-sampler" target="_joint1_joint2_joint3_joint4/visibility"/>
     </animation>
   </library_animations>
+  
+    <library_animation_clips>
+  
+	<animation_clip id="testID" name="default" end="0.4'>
+		<instance_animation url="#joint2.rotateZ__joint1_joint2"/>
+		<instance_animation url="#joint3.rotateZ__joint1_joint2_joint3"/>
+		<instance_animation url="#joint4.rotateZ__joint1_joint2_joint3_joint4"/>
+	</animation_clip>
+	<animation_clip id="single" name="single" end="0.4">
+		<instance_animation url="#joint2.rotateZ__joint1_joint2"/>
+	</animation_clip>	
+  
+  </library_animation_clips>
+  
+  
   <scene>
     <instance_visual_scene url="#VisualSceneNode"/>
   </scene>
