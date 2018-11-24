@@ -114,29 +114,29 @@ class RynnConverter(object):
             self.animations = []
             self.name = name
 
-# class TestRynn(unittest.TestCase):
-#
-#     def setUp(self):
-#         self.Rynn = RynnConverter()
-#
-#     def test_wrynn(self):
-#         self.assertEquals(self.Rynn.bones[0], 'wrynn')
-#
-#     def test_upperbody(self):
-#         self.assertEquals(self.Rynn.bones[1], 'upperbody')
-#
-#     def test_lowerbody(self):
-#         self.assertEquals(self.Rynn.bones[20], 'lowerbody')
-#
-#     def test_Ltoe(self):
-#         self.assertEquals(self.Rynn.bones[31], 'Ltoe')
-#
-#     def test_Lsheath(self):
-#         self.assertEquals(self.Rynn.bones[32], 'Lsheath')
-#
-#     def test_len(self):
-#         self.assertEquals(len(self.Rynn.bones), 33)
-#
+class TestRynn(unittest.TestCase):
+
+    def setUp(self):
+        self.Rynn = RynnConverter()
+
+    def test_wrynn(self):
+        self.assertEquals(self.Rynn.bones[0], 'wrynn')
+
+    def test_upperbody(self):
+        self.assertEquals(self.Rynn.bones[1], 'upperbody')
+
+    def test_lowerbody(self):
+        self.assertEquals(self.Rynn.bones[20], 'lowerbody')
+
+    def test_Ltoe(self):
+        self.assertEquals(self.Rynn.bones[31], 'Ltoe')
+
+    def test_Lsheath(self):
+        self.assertEquals(self.Rynn.bones[32], 'Lsheath')
+
+    def test_len(self):
+        self.assertEquals(len(self.Rynn.bones), 33)
+
 
 def indent(elem, level=0):
     i = "\n" + level*"  "
@@ -249,7 +249,7 @@ def create_animation_clip(name, tracks, start=0, end=0.0):
     """
     animation_tags = []
 
-    clip_tag = ET.Element('animation_clip')
+    clip_tag = ET.Element('{http://www.collada.org/2005/11/COLLADASchema}animation_clip')
     clip_tag.set('id', name)
     clip_tag.set('name', name)
 
@@ -259,7 +259,7 @@ def create_animation_clip(name, tracks, start=0, end=0.0):
         animation_tags.append(an_tag)
         # print(ET.tostring(an_tag))
 
-        instance = ET.SubElement(clip_tag, 'instance_animation')
+        instance = ET.SubElement(clip_tag, '{http://www.collada.org/2005/11/COLLADASchema}instance_animation')
         instance.set('url', "#" + an_name)
 
         animation_length = float(anim.timestamps[-1])
@@ -277,20 +277,52 @@ def create_animation_clip(name, tracks, start=0, end=0.0):
     return clip_tag, animation_tags
 
 
+def add_animations_to_file(input_file, output_file, animation_tags, animation_clip_tag,
+                           clear_animations=True, clear_clips = False):
+    # Open original file
+    ET.register_namespace('', "http://www.collada.org/2005/11/COLLADASchema")
+    et = ET.parse(input_file)
+    root = et.getroot()
+    library_animations = root.findall("{http://www.collada.org/2005/11/COLLADASchema}library_animations")
+
+    if not library_animations:
+        library_animations = ET.SubElement(root, '{http://www.collada.org/2005/11/COLLADASchema}library_animations')
+    else:
+        library_animations = library_animations[0]
+
+    library_animation_clips = root.findall("{http://www.collada.org/2005/11/COLLADASchema}library_animation_clips")
+
+    if not library_animation_clips:
+        library_animation_clips = ET.SubElement(root, '{http://www.collada.org/2005/11/COLLADASchema}library_animation_clips')
+    else:
+        library_animation_clips = library_animation_clips[0]
+
+    library_animation_clips.append(animation_clip_tag)
+    indent(library_animation_clips)
+
+    for tag in animation_tags:
+        library_animations.append(tag)
+    indent(library_animations)
+    # Write back to file
+
+    et.write(output_file, encoding='utf-8', xml_declaration=True)
+    # et.write(output_file, xml_declaration=True)
+
+
 if __name__ == '__main__':
     conv = RynnConverter()
-    input_file = \
+    drakan_animation_file = \
         r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim507 run.txt'
     name = 'RUN'
     output_file = 'tmp'
+    # input_dae_file = r"C:\GoDot\Projects\GoDrak\Models\Player_leather\leather_animatied.dae"
+    input_dae_file = r"C:\GoDot\Projects\GoDrak\Models\Player_leather\leather.dae"
+    output_dae_file = r"C:\GoDot\Projects\GoDrak\Models\Player_leather\leather_animatied.dae"
 
-    conv.get_animations(input_file, name)
+    conv.get_animations(drakan_animation_file, name)
     clip_tag, animation_tags = create_animation_clip(conv.name, conv.animations)
 
-    with open(output_file, 'w') as tmp:
-        tmp.write(ET.tostring(clip_tag))
-        for an in animation_tags:
-            tmp.write(ET.tostring(an))
+    add_animations_to_file(input_dae_file, output_dae_file, animation_tags, clip_tag)
 
 
 
