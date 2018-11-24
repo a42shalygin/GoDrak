@@ -9,42 +9,26 @@ class RynnConverter(object):
     animations = None
     name = None
 
-    def __init__(self):
+    def __init__(self, drakan_model_path):
         self.bones = []
-        self.bones.append('wrynn')
-        self.bones.append('upperbody')
-        self.bones.append('torso')
-        self.bones.append('chest')
-        self.bones.append('neck')
-        self.bones.append('head')
-        self.bones.append('hair1')
-        self.bones.append('hair2')
-        self.bones.append('hair3')
-        self.bones.append('Lcollar')
-        self.bones.append('Luparm')
-        self.bones.append('Lforearm')
-        self.bones.append('Lhand')
-        self.bones.append('Lweapon')
-        self.bones.append('Rcollar')
-        self.bones.append('Ruparm')
-        self.bones.append('Rforearm')
-        self.bones.append('Rhand')
-        self.bones.append('Rweapon')
-        self.bones.append('Backsheath')
-        self.bones.append('lowerbody')
-        self.bones.append('Rhip')
-        self.bones.append('Rtigh')
-        self.bones.append('Rcalf')
-        self.bones.append('Rfoot')
-        self.bones.append('Rtoe')
-        self.bones.append('Rsheath')
-        self.bones.append('Lhip')
-        self.bones.append('Ltigh')
-        self.bones.append('Lcalf')
-        self.bones.append('Lfoot')
-        self.bones.append('Ltoe')
-        self.bones.append('Lsheath')
+        self.set_bones(drakan_model_path)
 
+    def set_bones(self, file):
+        with open(file) as inp:
+            nodes = False
+
+            for line in inp:
+                line = line.strip()
+                if 'nodes [' in line:
+                    nodes = True
+                if nodes and ']' == line:
+                    return
+                if nodes:
+                    name = re.search('(\\d+)\s+name="(.+?)"', line)
+                    if name:
+                        print('Found Node %s named %s' % (name.groups()[0], name.groups(1)))
+                        # self.bones[] =
+                        self.bones.insert(int(name.groups()[0]), name.groups()[1])
 
     def get_animations(self, path_to_file, name):
         self.name = name
@@ -67,36 +51,23 @@ class RynnConverter(object):
                     if data and current_bone:
                         current_bone.timestamps.append(data[0])
                         an = []
-                        # an.append(data[1])
-                        # an.append(data[4])
-                        # an.append(data[7])
-                        # an.append(data[7])
-                        # an.append(data[10])
-                        # an.append(data[2])
-                        # an.append(data[5])
-                        # an.append(data[8])
-                        # an.append(data[11])
-                        # an.append(data[3])
-                        # an.append(data[6])
-                        # an.append(data[9])
-                        # an.append(data[12])
-                        # an = an + ['0', '0', '0', '1']
                         an.append(data[1])
-                        an.append(data[2])
-                        an.append(data[3])
-                        an.append("0")
                         an.append(data[4])
-                        an.append(data[5])
-                        an.append(data[6])
-                        an.append("0")
                         an.append(data[7])
+                        an.append(data[10] + "\n")
+                        an.append(data[2])
+                        an.append(data[5])
                         an.append(data[8])
+                        an.append(data[11] + "\n")
+                        an.append(data[3])
+                        an.append(data[6])
                         an.append(data[9])
-                        an.append("0")
-                        an.append(data[10])
-                        an.append(data[11])
-                        an.append(data[12])
-                        an.append("1")
+                        an.append(data[12] + "\n")
+
+                        #=======================
+
+                        an = an + ['0', '0', '0', '1']
+
                         current_bone.animations.append(an)
 
         self.animations = animations
@@ -117,7 +88,8 @@ class RynnConverter(object):
 class TestRynn(unittest.TestCase):
 
     def setUp(self):
-        self.Rynn = RynnConverter()
+        self.Rynn =  RynnConverter(r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System' +
+                         r'\System [root]\Rynn\Singleplayer\Model3713 leather armor(h).txt')
 
     def test_wrynn(self):
         self.assertEquals(self.Rynn.bones[0], 'wrynn')
@@ -310,9 +282,12 @@ def add_animations_to_file(input_file, output_file, animation_tags, animation_cl
 
 
 if __name__ == '__main__':
-    conv = RynnConverter()
-    drakan_animation_file = \
-        r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim507 run.txt'
+    conv = RynnConverter(r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System' +
+                         r'\System [root]\Rynn\Singleplayer\Model3713 leather armor(h).txt')
+    # drakan_animation_file = r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim470 balance.txt'
+    # drakan_animation_file = r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim649 runeblade.txt'
+    drakan_animation_file = r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim675 run1h.txt'
+    # drakan_animation_file = r'C:\Games\Drakan_ed\Psygnosis\Drakan\Drakan Dump\Common\System\System [root]\Animations\Anim560 ride.txt'
     name = 'RUN'
     output_file = 'tmp'
     # input_dae_file = r"C:\GoDot\Projects\GoDrak\Models\Player_leather\leather_animatied.dae"

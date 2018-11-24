@@ -25,27 +25,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
-          <entry key="tmp" value="4" />
+          <entry key="dae" value="1" />
+          <entry key="py" value="3" />
+          <entry key="tmp" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="2" />
-          <entry key="XML" value="3" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="3" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4986" />
+          <entry key="py" value="6295" />
           <entry key="tmp" value="7" />
+          <entry key="txt" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="4986" />
+          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="Python" value="6295" />
         </counts>
       </usages-collector>
     </session>
@@ -55,12 +57,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Amination_converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="289" column="39" lean-forward="true" selection-start-line="289" selection-start-column="39" selection-end-line="289" selection-end-column="39" />
+            <state relative-caret-position="109">
+              <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1543079758566" expanded="true" signature="5306:9131" ph="..." />
+                <marker date="1543102709202" expanded="true" signature="298:908" ph="..." />
+                <marker date="1543102709202" expanded="true" signature="4268:8093" ph="..." />
+                <marker date="1543102709202" expanded="true" signature="9859:11023" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/xml/etree/ElementTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="789" column="29" selection-start-line="789" selection-start-column="14" selection-end-line="789" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tmp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="2720" lean-forward="true" selection-start-line="2720" selection-end-line="2720" />
             </state>
           </provider>
         </entry>
@@ -88,6 +110,8 @@
       <find>.append</find>
       <find>input</find>
       <find>float</find>
+      <find>add_animations_to_file</find>
+      <find>insert</find>
     </findStrings>
     <replaceStrings>
       <replace>+=</replace>
@@ -144,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Amination_converter">
+  <component name="RunManager" selected="Python tests.Unittests in Amination_converter.py">
     <configuration name="Amination_converter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,8 +210,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Amination_converter" />
         <item itemvalue="Python tests.Unittests in Amination_converter.py" />
+        <item itemvalue="Python.Amination_converter" />
       </list>
     </recent_temporary>
   </component>
@@ -202,24 +226,17 @@
       <option name="presentableId" value="Default" />
       <updated>1535207333863</updated>
     </task>
+    <task id="LOCAL-00001" summary="Automated animation convertation (algorythm still does not work tho)">
+      <created>1543087897768</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543087897768</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_Amination_converter_TestRynn_test_wrynn - 2018.08.25 at 17h 43m 45s.xml">
-      <configuration name="Unittests for Amination_converter.TestRynn.test_wrynn" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Amination_converter_TestRynn - 2018.08.25 at 17h 43m 49s.xml">
-      <configuration name="Unittests for Amination_converter.TestRynn" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Amination_converter_TestRynn - 2018.08.25 at 17h 44m 47s.xml">
-      <configuration name="Unittests for Amination_converter.TestRynn" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Amination_converter_TestRynn - 2018.08.25 at 17h 47m 03s.xml">
-      <configuration name="Unittests for Amination_converter.TestRynn" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Amination_converter_TestRynn - 2018.08.25 at 17h 48m 05s.xml">
-      <configuration name="Unittests for Amination_converter.TestRynn" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_Amination_converter_TestRynn - 2018.08.25 at 17h 48m 21s.xml">
       <configuration name="Unittests for Amination_converter.TestRynn" configurationId="tests" />
     </history-entry>
@@ -235,12 +252,27 @@
     <history-entry file="Unittests_in_Amination_converter_py - 2018.08.25 at 18h 15m 58s.xml">
       <configuration name="Unittests in Amination_converter.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_Amination_converter_py - 2018.11.24 at 20h 21m 31s.xml">
+      <configuration name="Unittests in Amination_converter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Amination_converter_py - 2018.11.24 at 23h 46m 13s.xml">
+      <configuration name="Unittests in Amination_converter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Amination_converter_py - 2018.11.24 at 23h 46m 56s.xml">
+      <configuration name="Unittests in Amination_converter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Amination_converter_py - 2018.11.25 at 02h 37m 57s.xml">
+      <configuration name="Unittests in Amination_converter.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Amination_converter_py - 2018.11.25 at 02h 38m 29s.xml">
+      <configuration name="Unittests in Amination_converter.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12241653" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12469636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,10 +282,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291815" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" x="0" y="0" width="273" height="495" id="Documentation" side_tool="true" weight="0.32955465" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -262,29 +295,50 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Automated animation convertation (algorythm still does not work tho)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automated animation convertation (algorythm still does not work tho)" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Amination_converter.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="10" />
+          <line>298</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Amination_converter.py</url>
-          <line>288</line>
-          <option name="timeStamp" value="15" />
+          <line>271</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Amination_converter.py</url>
+          <line>257</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://C:/Python27/Lib/xml/etree/ElementTree.py</url>
+          <line>885</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://C:/Python27/Lib/xml/etree/ElementTree.py</url>
+          <line>884</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="sampler" />
+        <watch expression="f" />
+        <watch expression="et._root" />
+        <watch expression="et" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tmp" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
@@ -292,13 +346,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="2720" lean-forward="true" selection-start-line="2720" selection-end-line="2720" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Models/Player_leather/leather_animatied.dae">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/xml/etree/ElementTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="789" column="29" selection-start-line="789" selection-start-column="14" selection-end-line="789" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Amination_converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="289" column="39" lean-forward="true" selection-start-line="289" selection-start-column="39" selection-end-line="289" selection-end-column="39" />
+        <state relative-caret-position="109">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1543079758566" expanded="true" signature="5306:9131" ph="..." />
+            <marker date="1543102709202" expanded="true" signature="298:908" ph="..." />
+            <marker date="1543102709202" expanded="true" signature="4268:8093" ph="..." />
+            <marker date="1543102709202" expanded="true" signature="9859:11023" ph="..." />
           </folding>
         </state>
       </provider>
